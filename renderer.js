@@ -5,3 +5,14 @@
  * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
  * to expose Node.js functionality from the main process.
  */
+const webview = document.querySelector('#webview');
+webview.addEventListener('dom-ready', () => {
+    console.log('dom-ready')
+})
+webview.addEventListener('did-navigate', () => {
+    console.log('did-navigate')
+})
+
+webview.addEventListener('new-window', () => {
+    console.log('new-window')
+})
